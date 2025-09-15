@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  dbmysql:
+    image: mysql:latest
+    environment:
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: admin123
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ms_users
+    ports:
+      - "3306:3306"
+    networks:
+      - mynetwork
+  msuser:
+    image: msuser:0.0.1-snapshot
+    build:
+      context: ./msUser
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://dbmysql:3306/ms_users?useTimezone=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: docker
+      SPRING_DATASOURCE_PASSWORD: admin123
+      JWT_PRIVATE_KEY: classpath:app.key
+      JWT_PUBLIC_KEY: classpath:app.pub
+    ports:
+      - "8081:8081"
+    command: mvn spring-boot:run
+    depends_on:
+      - dbmysql
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: 
+      bridge

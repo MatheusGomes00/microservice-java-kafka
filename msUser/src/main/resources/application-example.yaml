@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: msUser
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://dbmysql:3306/ms_users?useTimezone=true&serverTimezone=UTC
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+  kafka:
+    bootstrap-servers: kafka:9092
+    topics: my_topic
+server:
+  port: 8081
+
+jwt:
+  private:
+    key: classpath:app.key
+  public:
+    key: classpath:app.pub

@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://notifydb:27017/registros
+  kafka:
+    bootstrap-servers: kafka:9092
+    topics: my_topic
+
+server:
+  port: 8082
