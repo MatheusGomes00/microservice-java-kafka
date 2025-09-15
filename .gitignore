@@ -10,7 +10,7 @@ target/
 
 # Arquivos de configuração reais (sensíveis)
 application.properties
-application.yaml
+application.yml
 
 ### STS ###
 .apt_generated
