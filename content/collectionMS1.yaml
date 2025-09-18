@@ -1,0 +1,117 @@
+type: collection.insomnia.rest/5.0
+name: Microsservice1
+meta:
+  id: wrk_d893f2b50dbc47aea30de52673cd1a4e
+  created: 1758206486967
+  modified: 1758206486967
+  description: ""
+collection:
+  - url: http://localhost:8081/api/auth
+    name: Autenticar
+    meta:
+      id: req_94e1d18d07ee45a2824cf5305196c53b
+      created: 1758206500775
+      modified: 1758206861525
+      isPrivate: false
+      description: ""
+      sortKey: -1758206500775
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "12078303640",
+        	"password": "senha1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/users/register
+    name: Cadastrar Usuario
+    meta:
+      id: req_f8a85147938a479ab001c7f7bc1f66e9
+      created: 1758206841726
+      modified: 1758206927407
+      isPrivate: false
+      description: ""
+      sortKey: -1758206841726
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "12078303640",
+        	"password": "senha1234",
+        	"email": "matheus@teste.com",
+        	"cep": "14409012"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/users/update
+    name: Alterar Senha
+    meta:
+      id: req_00666975ff3c4cf7893f575a8838b490
+      created: 1758207345470
+      modified: 1758207655090
+      isPrivate: false
+      description: ""
+      sortKey: -1758207345470
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "12078303640",
+        	"oldPassword": "senha1234",
+        	"newPassword": "senha1234@"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtc1VzZXIiLCJzdWIiOiIxMjA3ODMwMzY0MCIsImV4cCI6MTc1ODIxMDg0OCwiaWF0IjoxNzU4MjA3MjQ4LCJzY29wZSI6InJlYWQifQ.DsBTH51Pq7RKGLIOP-WNrUmBZDuXAJsAkZ0zpGt8mtvsvlSPCuPa28xgDCnYdx9si6WQgkOvndvCe2mHbhTzc85gvU16pTCqKXekbNJskY9AURTJOttINr2mJnyl0cdMgOMmZkhC0xgOXTkWwbXQgF9_Zs8TUgnkVIaogPC_0PyzzBG5uIKLUz8BE-du_H-UtDWkXiOckMw-6xqCpOvhBvWVRXTRFzz3rsvY89NLbgcG8KtuJn62qO6vcNLsxaYZ11MGz3DEaUiSqm-deLZaXAk_0cHnuzli29DBts-EJD2JgzbtKN0ZWkMcDSEnATJj12z_GNEq88TEfxQu3jS6ig
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_722e8d1ac2e265e14b78667b8e9fd81d0648205a
+    created: 1758206486994
+    modified: 1758206486994
+environments:
+  name: Base Environment
+  meta:
+    id: env_722e8d1ac2e265e14b78667b8e9fd81d0648205a
+    created: 1758206486986
+    modified: 1758206486986
+    isPrivate: false
