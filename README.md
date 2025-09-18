@@ -34,7 +34,7 @@ em construir dois microsserviços que comuniquem entre si através de uma mensag
 ---
 
 ## Como usar
-1. Baixar ou fazer clone do repoistório. 
+1. Baixar ou fazer clone do repositório. 
 2. Configurar ambiente:
    - **msUser**:
      - Criar e configurar o application.yml seguindo o application-example.yaml. 
@@ -50,7 +50,7 @@ em construir dois microsserviços que comuniquem entre si através de uma mensag
 
 ## Demonstração
 A mensageria foi configurada para enviar apenas mensagens do Serviço de Usuários para o
-Serviço de Mensageria. O **Producer** foi configurado no microsservice **msUser** que 
+Serviço de Mensageria. O **Producer** foi configurado no microservice **msUser** que 
 envia mensagens ao **kafkaConsumer** que seria o **Consumer** configurado. 
 <img src="./content/mapaMensageria.jpg" alt="Mapa mensageria" width="700"/>
 
@@ -63,8 +63,8 @@ acessível por meio de autorização com Token JWT.
 
 ### Testes de Endpoints com Insomnia
 
-Os endpoints criados foram testados utilizando o **Insomnia**. Na pasta [content]("./content")
-deste repositório tem uma coleção .yaml que pode ser inportada para testes.
+Os endpoints criados foram testados utilizando o **Insomnia**. Na pasta [content](./content)
+deste repositório tem uma coleção .yaml que pode ser importada para testes.
 
 * **Registro de Usuário** (`POST /api/users/register`). Observe que o auto-preenchimento
 do endereço está sendo feito corretamente através da API externa ViaCep. Basta passar o CEP.
