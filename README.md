@@ -79,8 +79,9 @@ do endereço está sendo feito corretamente através da API externa ViaCep. Bast
 
 * **Atualização de Senha** (`PUT /api/users/update`)
 
-  <img src="./content/insomniaViewUpdateToken.jpg" alt="Teste de atualização de senha no Insomnia" width="700"/>
-  <img src="./content/insomniaViewUpdate.jpg" alt="Teste de atualização de senha no Insomnia" width="700"/>
+  <img src="./content/InsomniaViewUpdateToken.jpg" alt="Teste de atualização de senha no Insomnia" width="700"/>
+  <br>
+  <img src="./content/InsomniaViewUpdate.jpg" alt="Teste de atualização de senha no Insomnia" width="700"/>
 
 ---
 
