@@ -24,7 +24,7 @@ em construir dois microsserviços que comuniquem entre si através de uma mensag
 ## Funcionalidades:
 
 * Desenvolvimento de **dois microsserviços**:
-    - **Serviço de Usuários** → responsável pelo cadastro, gerenciamento de usuários e configuração do Producer do Kafka.
+    - **Serviço de Usuários** → API REST responsável pelo cadastro, gerenciamento de usuários e configuração do Producer do Kafka.
     - **Serviço de Mensageria** → responsável por receber e armazenar mensagens .
 * Integração com a **API ViaCEP** para preenchimento automático de endereço.
 * Implementação de **autenticação e autorização via JWT** para proteção dos endpoints.
